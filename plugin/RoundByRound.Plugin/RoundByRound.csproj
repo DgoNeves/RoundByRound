@@ -7,8 +7,8 @@
     <ProjectGuid>{88196FC0-97D5-4385-A03C-23B88DC2CB5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RoundByRound.Plugin</RootNamespace>
-    <AssemblyName>RoundByRound.Plugin</AssemblyName>
+    <RootNamespace>RoundByRound</RootNamespace>
+    <AssemblyName>RoundByRound</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

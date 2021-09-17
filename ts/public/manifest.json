@@ -108,12 +108,12 @@
       "enable_auto_refresh": true,
       "reload_delay": 1000,
       "filter": "*.*"
-    }
-  },
-  "extra-objects": {
-    "RoundByRoundPlugin": {
-      "file": "files/plugins/RoundByRound.Plugin.dll",
-      "class": "RoundByRound.Plugin.RoundPlugin"
+    },
+    "extra-objects": {
+      "RoundByRoundPlugin": {
+        "file": "files/plugins/RoundByRound.dll",
+        "class": "RoundByRound.RoundPlugin"
+      }
     }
   }
 }

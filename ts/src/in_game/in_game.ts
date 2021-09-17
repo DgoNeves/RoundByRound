@@ -36,11 +36,12 @@ class InGame extends AppWindow {
     overwolf.extensions.current.getExtraObject("RoundByRoundPlugin", (result) => {
       if (result.success === true) {
         this._plugin = result.object;
-        console.log("Plugin loaded, fck yeah!");
+        console.log("Plugin loaded!");
       } else {
-        console.log("Plugin not loaded!");
+        console.log(result);
       }
     });
+
   }
 
   public static instance() {
@@ -56,6 +57,14 @@ class InGame extends AppWindow {
   }
 
   private onInfoUpdates(info) {
+
+    if(this._plugin) {
+      this._plugin.LiveEvent(info, function(result) {
+        console.log(result);
+      });
+    }
+
+
     this.logLine(this._infoLog, info, false);
   }
 
@@ -63,7 +72,7 @@ class InGame extends AppWindow {
   private onNewEvents(e) {
 
     if(this._plugin) {
-      this._plugin.get().LiveEvent(e, function(result) {
+      this._plugin.LiveEvent(e, function(result) {
         console.log(result);
       });
     }

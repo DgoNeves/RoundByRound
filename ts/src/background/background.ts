@@ -33,11 +33,17 @@ class BackgroundController {
     overwolf.extensions.current.getExtraObject("RoundByRoundPlugin", (result) => {
       if (result.success === true) {
         this._plugin = result.object;
-        console.log("Plugin loaded!");
+        console.log(this._plugin);
+
+        this._plugin.LiveEvent("hi", function(result) {
+          console.log(result);
+        });
+
       } else {
         console.log(result);
       }
     });
+
 
   };
 
